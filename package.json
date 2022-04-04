@@ -1,0 +1,20 @@
+{
+  "name": "handle-page",
+  "version": "0.0.1",
+  "description": "浏览器页面处理工具",
+  "scripts": {
+    "build": "gulp -LL -f gulp/index.js build --env=pro",
+    "dev": "gulp -LL -f gulp/index.js build"
+  },
+  "author": "BuZhiDaoGH",
+  "license": "ICS",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "minimist": "^1.2.6"
+  }
+}

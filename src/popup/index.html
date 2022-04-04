@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Popup设置页面</title>
+  <style type="text/css">
+    #content {
+      width: 500px;
+      max-height: 200px;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+
+    #tableRules {
+      margin: 0 auto;
+    }
+
+    /* Switch开关样式 */
+    input[type='checkbox'].switch {
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      position: relative;
+      width: 40px;
+      height: 20px;
+      background: #ccc;
+      border-radius: 10px;
+      transition: border-color .3s, background-color .3s;
+    }
+
+    input[type='checkbox'].switch::after {
+      content: '';
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: #fff;
+      /*box-shadow: 0, 0, 2px, #999;*/
+      transition: .4s;
+      top: 2px;
+      position: absolute;
+      left: 2px;
+    }
+
+    input[type='checkbox'].switch:checked {
+      background: rgb(19, 206, 102);
+    }
+
+    /* input[type=checkbox]被选中时：伪元素显示下面样式 位置发生变化 */
+    input[type='checkbox'].switch:checked::after {
+      content: '';
+      position: absolute;
+      left: 55%;
+      top: 2px;
+    }
+
+    input[type='button'].button {
+      width: 40px;
+      height: 20px;
+      background: rgb(19, 206, 102);
+      border-radius: 5px;
+      text-align: center;
+      border: 0;
+      font-size: 14px;
+      display: inline-block;
+      color: white;
+      line-height: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="content">
+    <table id="tableRules">
+      <thead>
+      <tr>
+        <th>名称</th>
+        <th>范围(正则)</th>
+        <th>规则(Xpath和Selector)</th>
+        <th>类型</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div style="margin-bottom: 5px;margin-top: 5px;">
+    <input style="width: 75px" type="text" id="selfName" placeholder="规则名" />
+    <input style="width: 100px" type="text" id="selfUrl" placeholder="规则作用网址" />
+    <input style="width: 140px" type="text" id="selfRule" placeholder="规则内容" />
+    <select id="selfType">
+      <option value=1>Selector</option>
+      <option value=0>Xpath</option>
+    </select>
+    <input class="button" id="addSelfRule" type="button" value="添加" />
+  </div>
+
+  <script type="text/javascript" src="/assets/lib/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="/util/common.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
+</body>
+</html>

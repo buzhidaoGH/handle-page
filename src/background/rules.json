@@ -1,0 +1,34 @@
+[
+  {
+    "matchId": "base-rules-001",
+    "matchName": "百度左广告",
+    "matchUrl": "*://www.baidu.com/*",
+    "matchStatus": true,
+    "matchType": 0,
+    "matchRule": "//div[@id='content_left']/div[not(@class or @style)]"
+  },
+  {
+    "matchId": "base-rules-002",
+    "matchName": "必应左广告",
+    "matchUrl": "*://cn.bing.com/*",
+    "matchStatus": true,
+    "matchType": 1,
+    "matchRule": ".b_ad"
+  },
+  {
+    "matchId": "base-rules-003",
+    "matchName": "百度右广告",
+    "matchUrl": "*://www.baidu.com/*",
+    "matchStatus": true,
+    "matchType": 0,
+    "matchRule": "//div[@id='content_right']/div[not(@class or @style)]"
+  },
+  {
+    "matchId": "base-rules-004",
+    "matchName": "百度右关联",
+    "matchUrl": "*://www.baidu.com/*",
+    "matchStatus": false,
+    "matchType": 1,
+    "matchRule": "#content_right"
+  }
+]
